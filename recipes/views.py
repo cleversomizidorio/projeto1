@@ -4,7 +4,11 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    return HttpResponse("Home1")
+    return render(request, 'recipes/home.html', context={
+        'name': 'João',
+    })
+
+
 
 def contato(request):
     return HttpResponse("contato")
